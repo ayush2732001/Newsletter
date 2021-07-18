@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express=require('express');
 const app=express();
 const request=require('request');
@@ -48,10 +49,10 @@ app.post("/",function(req,res){
 
   };
   const jsonData=JSON.stringify(data);
-  const url="https://us6.api.mailchimp.com/3.0/lists/17ee375ba8?skip_merge_validation=false&skip_duplicate_check=false";
+  const url=process.env.URL;
   const options={
     method:"POST",
-    auth:"ayush1:492ff904cd30716a16558c4691c5d06e-us6"
+    auth:process.env.AUTH
   }
   const request=https.request(url,options,function(response){
     if(response.statusCode==200&&response.error_count==0)

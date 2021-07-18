@@ -71,9 +71,3 @@ app.post("/",function(req,res){
 
 });
  //console.log(x);
-
-
-// API key
-// 492ff904cd30716a16558c4691c5d06e-us6
-//List id / audience id
-// 17ee375ba8
